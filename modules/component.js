@@ -13,7 +13,7 @@ export class Component {
 
     this.newPos = _ => {
       this.x += this.speedX;
-      this.Y += this.speedY;
+      this.y += this.speedY;
     };
     this.update = function () {
       this.context.fillStyle = this.color;
