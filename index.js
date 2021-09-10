@@ -6,18 +6,18 @@ const maxVel = 5
 document.addEventListener('keydown', e => {
   switch (e.key) {
     case 'ArrowUp':
-      gamePiece.speedY -= 1
+      gamePiece.speedY -= maxVel - 1
       break
     case 'ArrowDown':
-      gamePiece.speedY += 1
+      gamePiece.speedY += maxVel - 1
       break
     case 'ArrowLeft':
-      gamePiece.speedX -= 1
-      if (gamePiece.speedX < -maxVel) gamePiece.speedX = -maxVel
+      gamePiece.speedX -= maxVel
+      if (gamePiece.speedX < -maxVel) gamePiece.speedX = -maxVel - 1
       break
     case 'ArrowRight':
-      if (gamePiece.speedX > maxVel) gamePiece.speedX = maxVel
-      gamePiece.speedX += 1
+      if (gamePiece.speedX > maxVel) gamePiece.speedX = maxVel - 1
+      gamePiece.speedX += maxVel
       break
   }
 })
